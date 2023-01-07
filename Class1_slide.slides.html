@@ -13855,7 +13855,7 @@ If you don't have that much time, please skip this course. It would be disastrou
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><strong>Mac OS:</strong></p>
 <ul>
-<li><code>Terminal</code> (<font style='color:blue'>built-in CLI</font>): Spotlight Search/Launchpad -&gt; Type "Terminal" -&gt; Type "<b>py3</b>" or "<b>python3</b>"</li>
+<li><code>Terminal</code> (<font style='color:blue'>built-in CLI</font>): Spotlight Search/Launchpad -&gt; Type "Terminal" -&gt; Type "<b>python3</b>" or "<b>py3</b>" </li>
 <li><code>IDLE</code> (<font style='color:red'>python-specific CLI</font>): Spotlight Search/Launchpad -&gt; Type "IDLE"</li>
 </ul>
 </blockquote>
@@ -13868,7 +13868,7 @@ If you don't have that much time, please skip this course. It would be disastrou
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><p style='line-height:0.5;'>Mac OS Terminal:</p></p>
 <p><p style='line-height:0.5;'>string inside the blue box indicates <b>current working directory</b></p></p>
-<p><p style='line-height:0.5;'>Or, you can type "pwd" to print working directory</p>
+<p><p style='line-height:0.5;'>Or, you can type "pwd" to <b>p</b>rint <b>w</b>orking <b>d</b>irectory</p>
 <img src="./img/week1-terminal_.jpg" width="500" align='left'></p>
 
 </div>
@@ -13975,8 +13975,8 @@ If you don't have that much time, please skip this course. It would be disastrou
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.menti.com/al4xsm9uva4v">https://www.menti.com/al4xsm9uva4v</a>
-<img src="img/Basic_Math_QRcode.png" width='400'/></p>
+<p><a href="https://www.menti.com/al4xsm9uva4v">https://www.menti.com/al4xsm9uva4v</a></p>
+<p><img src="./img/Basic_Math_QRcode.png" width='200' align="left"/></p>
 
 </div>
 </div>
@@ -14375,8 +14375,8 @@ If you don't have that much time, please skip this course. It would be disastrou
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.menti.com/alwsyo82du3b">https://www.menti.com/alwsyo82du3b</a>
-<img src="img/string_QRcode.png" width='400'/></p>
+<p><a href="https://www.menti.com/alwsyo82du3b">https://www.menti.com/alwsyo82du3b</a></p>
+<p><img src="img/string_QRcode.png" width='200' align="left"/></p>
 
 </div>
 </div>
@@ -14471,7 +14471,7 @@ If you don't have that much time, please skip this course. It would be disastrou
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Using command <code>cd..</code> to navigate to the parent folder of current folder</li>
+<li>Using command <code>cd ..</code> to navigate to the parent folder of current folder</li>
 </ul>
 
 </div>
@@ -14531,6 +14531,18 @@ You can download it from here: <a href="https://www.sublimetext.com/download">ht
 </div>
 </div>
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As for iMac in the lab, we don't have admin right to install new software. You can:</p>
+<ul>
+<li>Open Python IDLE: Type "IDLE" in Spotlight and open it</li>
+<li>Open editor: File -&gt; New File</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -14543,7 +14555,7 @@ You can download it from here: <a href="https://www.sublimetext.com/download">ht
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14692,6 +14704,19 @@ You can download it from here: <a href="https://www.sublimetext.com/download">ht
 <div class="alert alert-block alert-info">
 **Tip**: Even though it looks like a web page, jupyter notebook is running in your local computer. As you could tell from the link address "localhost:8888", "localhost" means the file is running in local end, and "8888" is the port number.
 </div>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As for iMac in the lab, you may fail to open jupyter because it is not added to the system path, which is only allowed by admin. In this case, you can:</p>
+<ol>
+<li>Type <code>export export PATH=/Users/your_SSOID/Library/Python/3.9/bin:$PATH</code> to add jupyter temporarily to the system path and then rerun "jupyter notebook" in Terminal</li>
+<li>Or, you can double click jupyternotebook.exe directly in the abovementioned directory</li>
+<li>You will need to copy the address "localhost:8888/blablabla" to broswer, which contains the token (secret key) for the notebook</li>
+</ol>
+
 </div>
 </div>
 </div></section></section><section><section>

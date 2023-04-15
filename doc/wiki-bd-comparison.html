@@ -14633,8 +14633,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The data are composed of triples of (entry, attribute name, attribute value)</span>
-<span class="c1"># So, a certain entry could have multiple records in the table</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The data are composed of (entry, attribute name, attribute value) triples</span>
+<span class="c1"># An entry could have multiple records in the table</span>
 <span class="c1"># The scripts below are used to remove duplicates</span>
 <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 <span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;entity&#39;</span><span class="p">]</span>
@@ -14801,7 +14801,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Keep the part of entity name before the &#39;(&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the part of entity name before the &#39;(&#39;</span>
 <span class="c1"># e.g. 倩女幽魂 (1987年電影) → 倩女幽魂</span>
 <span class="n">wiki</span><span class="p">[</span><span class="s1">&#39;entity_sim_clean&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">wiki</span><span class="p">[</span><span class="s1">&#39;entity_sim&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="nb">str</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
@@ -14855,7 +14855,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get a list of entries that are not functional pages nor existing on Baike in its original form (direct comparison)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get a list of entries that are not functional pages nor existing on Baike in its original form (full match)</span>
 <span class="n">search_list</span><span class="o">=</span><span class="n">wiki</span><span class="p">[(</span><span class="o">~</span><span class="n">wiki</span><span class="p">[</span><span class="s1">&#39;entity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">excludes</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="o">~</span><span class="n">wiki</span><span class="p">[</span><span class="s1">&#39;entity_sim_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;entity&#39;</span><span class="p">]))][</span><span class="s1">&#39;entity_sim_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
@@ -15025,7 +15025,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[114]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perform partial match</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perform partial match over the first 20K entries</span>
 <span class="n">not_found_list</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">search_list</span><span class="p">[:</span><span class="mi">20000</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bd_entities</span><span class="p">]</span>
 </pre></div>
 

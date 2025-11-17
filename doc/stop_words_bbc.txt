@@ -204,3 +204,8 @@ eight
 nine
 ten
 make
+say
+go
+first
+second
+third
